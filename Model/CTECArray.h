@@ -30,6 +30,7 @@ public:
 	Type get(int position);
 	void set(int position ,const Type& value);
     int indexOf(Type value);
+    int nextIndexOf(int position, Type value);
 };
 
 #endif /* MODEL_CTECARRAY_H_ */
