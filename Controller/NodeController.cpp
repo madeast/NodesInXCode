@@ -49,3 +49,26 @@ void NodeController :: start()
 	arrayTimer.stopTimer();
 	arrayTimer.displayTimerInformation();
 }
+
+void NodeController::checkSorts()
+{
+    /*
+     Create an array and list
+     Fill each with random data
+     sort and time
+     rept with ordered data
+     print results
+     */
+    
+    CTECArray<int> numbersInArray(5);
+    CtecList<int> numbersInList;
+    for(int spot = 0; spot < 5000; spot++)
+    {
+        int randomValue = rand();
+        numbersInArray.set(spot, randomValue);
+        numbersInList.addToEnd(randomValue);
+    }
+    
+}
+
+

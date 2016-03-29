@@ -26,12 +26,14 @@ private:
 CTECArray<int> * notHipsterInts;
 CtecList<int> * numbers;
 Timer arrayTimer;
+void testsLists();
+void checkSorts();
 
 
 public:
 	NodeController();
 	virtual ~NodeController();
-	void testsLists();
+
 	void start();
 };
 

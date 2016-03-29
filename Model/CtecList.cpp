@@ -328,4 +328,41 @@ Type CtecList<Type> :: set(int index, Type value)
 	return current;
 }
 
+template <class Type>
+void CtecList<Type> :: swap (int indexOne, int indexTwo)
+{
+    assert(indexOne < size && indexTwo < size);
+    ArrayNode<Type> * first = getFromIndex(indexOne);
+    ArrayNode<Type> * second = getFromIndex(indexTwo);
+    ArrayNode<Type> * temp = new ArrayNode<Type>();
+    
+    temp->setValue(first->getValue());
+    first->setValue(second->getValue());
+    second->setValue(temp->getValue());
+    
+    delete temp;
+}
+
+template <class Type>
+void CtecList<Type>::selectionSort()
+{
+    int innerLoop, outerLoop;
+    for(outerLoop = 0; outerLoop < this->size-1; outerLoop++)
+    {
+        int selectedMinimum = outerLoop;
+        for(innerLoop = outerLoop+1; innerLoop < size; innerLoop++)
+        {
+            if(getFromIndex(innerLoop) < getFromIndex(selectedMinimum))
+            {
+                selectedMinimum = innerLoop;
+            }
+        }
+        if(selectedMinimum != outerLoop)
+        {
+            swap(outerLoop, selectedMinimum);
+        }
+    }
+}
+
+
 
