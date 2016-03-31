@@ -179,12 +179,18 @@ int CTECArray<Type>:: nextIndexOf(int startingIndex, Type searchValue)
 }
 
 template <class Type>
-void CTECArray<Type> :: swap (int indexOne, int indexTwo)
+void ArrayNode<Type> :: swap (int indexOne, int indexTwo)
 {
     assert(indexOne < size && indexTwo < size);
-    Type temp = get(indexOne);
-    set(indexOne, get(indexTwo));
-    set(indexTwo, temp);
+    ArrayNode<Type> * first = get(indexOne);
+    ArrayNode<Type> * second = get(indexTwo);
+    ArrayNode<Type> * temp = new ArrayNode<Type>();
+    
+    temp->setValue(first->getValue());
+    first->setValue(second->getValue());
+    second->setValue(temp->getValue());
+    
+    delete temp;
 }
 
 
