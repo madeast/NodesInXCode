@@ -32,6 +32,9 @@ private:
     void mergesort(int dataArray [], int size);
     void merge(int data [], int sizeOne, int sizeTwo );
     void checkSorts();
+    void swap(int first, int second);
+    void quickSort(int data [], int size);
+    int partition(int first, int last);
 public:
 	NodeController();
 	virtual ~NodeController();
