@@ -158,9 +158,9 @@ void NodeController::quickSort(int first, int size)
     
     if(size > 1)
     {
-        pivotIndex = partition(first, last);
+        pivotIndex = partition(first, size);
         quickSort(first, pivotIndex-1);
-        quickSort(pivotIndex+1, last);
+        quickSort(pivotIndex+1, size);
     }
 }
 

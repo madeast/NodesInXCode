@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1538141CBBE6A300872B24 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E1538121CBBE6A300872B24 /* TreeNode.cpp */; };
 		2E4493A71C99A53900B01AFB /* NodeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E4493991C99A53900B01AFB /* NodeController.cpp */; };
 		2E4493A81C99A53900B01AFB /* NodeRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E44939B1C99A53900B01AFB /* NodeRunner.cpp */; };
 		2E4493A91C99A53900B01AFB /* ArrayNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E44939D1C99A53900B01AFB /* ArrayNode.cpp */; };
@@ -29,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E1538121CBBE6A300872B24 /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
+		2E1538131CBBE6A300872B24 /* TreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
 		2E44938E1C99A49600B01AFB /* NodesInXCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NodesInXCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4493991C99A53900B01AFB /* NodeController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeController.cpp; sourceTree = "<group>"; };
 		2E44939A1C99A53900B01AFB /* NodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeController.h; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				2E4493A41C99A53900B01AFB /* Node.h */,
 				2E4493A51C99A53900B01AFB /* Timer.cpp */,
 				2E4493A61C99A53900B01AFB /* Timer.h */,
+				2E1538121CBBE6A300872B24 /* TreeNode.cpp */,
+				2E1538131CBBE6A300872B24 /* TreeNode.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 				2E4493AC1C99A53900B01AFB /* Node.cpp in Sources */,
 				2E4493A71C99A53900B01AFB /* NodeController.cpp in Sources */,
 				2E4493AD1C99A53900B01AFB /* Timer.cpp in Sources */,
+				2E1538141CBBE6A300872B24 /* TreeNode.cpp in Sources */,
 				2E4493AB1C99A53900B01AFB /* CtecList.cpp in Sources */,
 				2E4493A81C99A53900B01AFB /* NodeRunner.cpp in Sources */,
 				2E4493A91C99A53900B01AFB /* ArrayNode.cpp in Sources */,

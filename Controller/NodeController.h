@@ -33,7 +33,7 @@ private:
     void merge(int data [], int sizeOne, int sizeTwo );
     void checkSorts();
     void swap(int first, int second);
-    void quickSort(int data [], int size);
+    void quickSort(int first, int size);
     int partition(int first, int last);
 public:
 	NodeController();
