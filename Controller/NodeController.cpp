@@ -190,8 +190,8 @@ int NodeController::partition(int first, int last)
 void NodeController::swap(int first, int second)
 {
     int temp = mergeData[first];
-    mergeData[first] = mergeData[last];
-    mergeData[last] = temp;
+    mergeData[first] = mergeData[second];
+    mergeData[second] = temp;
 }
 
 
