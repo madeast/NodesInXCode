@@ -28,6 +28,10 @@ public:
     int getHeight();
     bool isBalanced();
     TreeNode<Type>* getRoot();
+    void inorderTraversal(TreeNode<Type> * currentNode);
+    void postorderTraversal(TreeNode<Type> * currentNode);
+    void preorderTraversal(TreeNode<Type> * currentNode);
+    int calculateSize(TreeNode<Type> * currentNode);
 };
 
 #endif /* CTECBinaryTree_hpp */
