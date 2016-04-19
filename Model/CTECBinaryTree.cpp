@@ -170,48 +170,57 @@ bool CTECBinaryTree<Type> :: contains(Type value)
 template<class Type>
 Type CTECBinaryTree<Type> :: remove(const Type& value)
 {
-    CTECBinaryTree<Type> *current; //Pointer to traverse the tree.
-    CTECBinaryTree<Type> *trailCurrent; //Pointer behind current pointer.
-    CTECBinaryTree<Type> *temp; //Pointer to delete the node.
     
-    if(value == NULL)
+    if(!contains(value))
     {
-        cerr << "Error: The node to be deleted is NULL" << endl;
+        return value;
     }
-    else if(value->setLeftChild == NULL && value->setRightChild == NULL)
-    {
-        temp = value;
-        value = NULL;
-        delete temp;
-    }
-    else if(value->setLeftChild == NULL)
+    else
     {
         
     }
-    else if(value->setRightChild == NULL)
-    {
-        
-    }
-    else{
-        current = value->setLeftChild;
-        trailCurrent = NULL;
-        
-        while(current->setRightChild != NULL)
-        {
-            trailCurrent = current;
-            current = current->rlink;
-        }// end while
-        
-        value->info = current->rlink;
-        
-        if(trailCurrent == NULL) //current did not move;
-        {
-            value->setLeftChild = current->llink;
-        }
-        else
-        {
-            trailCurrent->rlink = current->llink;
-        }
-        delete current;
-    }
+//    CTECBinaryTree<Type> *current; //Pointer to traverse the tree.
+//    CTECBinaryTree<Type> *trailCurrent; //Pointer behind current pointer.
+//    CTECBinaryTree<Type> *temp; //Pointer to delete the node.
+//    
+//    if(value == NULL)
+//    {
+//        cerr << "Error: The node to be deleted is NULL" << endl;
+//    }
+//    else if(value->setLeftChild == NULL && value->setRightChild == NULL)
+//    {
+//        temp = value;
+//        value = NULL;
+//        delete temp;
+//    }
+//    else if(value->setLeftChild == NULL)
+//    {
+//        
+//    }
+//    else if(value->setRightChild == NULL)
+//    {
+//        
+//    }
+//    else{
+//        current = value->setLeftChild;
+//        trailCurrent = NULL;
+//        
+//        while(current->setRightChild != NULL)
+//        {
+//            trailCurrent = current;
+//            current = current->rlink;
+//        }// end while
+//        
+//        value->info = current->rlink;
+//        
+//        if(trailCurrent == NULL) //current did not move;
+//        {
+//            value->setLeftChild = current->llink;
+//        }
+//        else
+//        {
+//            trailCurrent->rlink = current->llink;
+//        }
+//        delete current;
+//    }
 }
