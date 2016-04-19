@@ -10,6 +10,37 @@
 using namespace std;
 
 template<class Type>
+CTECBinaryTree<Type> :: CTECBinaryTree()
+{
+    root = nullptr;
+    height = 0;
+    balanced = true;
+    size = 0;
+}
+
+template<class Type>
+bool CTECBinaryTree<Type> :: insert(const Type& value)
+{
+    if(contains(value))
+    {
+        return false;
+    }
+    else
+    {
+        if(value < root->getValue())
+        {
+            insert(value, root->getLeftChild());
+        }
+        else
+        {
+            insert(value, root->getRightChild());
+        }
+        return true;
+    }
+}
+
+
+template<class Type>
 void CTECBinaryTree<Type> :: inorderTraversal(TreeNode<Type> * currentNode)
 {
     if (currentNode != nullptr)
@@ -48,14 +79,109 @@ int CTECBinaryTree<Type>:: getHeight()
     calculateSize(root);
     return height;
 }
-
 template<class Type>
-int CTECBinaryTree<Type> :: calculateSize(TreeNode<Type> * currentNode)
+void CTECBinaryTree<Type> :: calculateSize(TreeNode<Type> * currentNode)
 {
     if(currentNode != nullptr)
     {
         calculateSize(currentNode->getLeftChild());
         calculateSize(currentNode->getRightChild());
         height++;
+    }
+}
+
+template<class Type>
+bool CTECBinaryTree<Type> :: contains(Type value, CTECBinaryTree<Type> * currentTree)
+{
+    /*
+     Is  value in root? - return true else
+     If the value is not in the root and is less than rott - call contains on left child.
+     Elsethe value is not in the root and is greater thatn root - call contains on right child.
+     */
+    if(currentTree == nullptr)
+    {
+        return false;
+    }
+    else if(currentTree->getRoot()->getValue() == value)
+    {
+        return contains(value, currentTree->getRoot()->getLeftChild());
+    }
+    else
+    {
+        return contains(value, currentTree->getRoot()->getRightChild());
+    }
+    return false;
+}
+
+template<class Type>
+bool CTECBinaryTree<Type> :: contains(Type value)
+{
+    /*
+     Is  value in root? - return true else
+     If the value is not in the root and is less than rott - call contains on left child.
+     Else the value is not in the root and is greater thatn root - call contains on right child.
+     */
+    bool isInTree = false;
+    if(root->getValue == value)
+    {
+        return true;
+    }
+    else if(value < root->getValue)
+    {
+        isInTree = contains(value, root->getLeftChild());
+    }
+    else
+    {
+        isInTree = contains(value, root->getRightChild());
+    }
+    return false;
+}
+
+template<class Type>
+Type CTECBinaryTree<Type> :: remove(const Type& value)
+{
+    CTECBinaryTree<Type> *current; //Pointer to traverse the tree.
+    CTECBinaryTree<Type> *trailCurrent; //Pointer behind current pointer.
+    CTECBinaryTree<Type> *temp; //Pointer to delete the node.
+    
+    if(value == NULL)
+    {
+        cerr << "Error: The node to be deleted is NULL" << endl;
+    }
+    else if(value->setLeftChild == NULL && value->setRightChild == NULL)
+    {
+        temp = value;
+        value = NULL;
+        delete temp;
+    }
+    else if(value->setLeftChild == NULL)
+    {
+        
+    }
+    else if(value->setRightChild == NULL)
+    {
+        
+    }
+    else{
+        current = value->setLeftChild;
+        trailCurrent = NULL;
+        
+        while(current->setRightChild != NULL)
+        {
+            trailCurrent = current;
+            current = current->rlink;
+        }// end while
+        
+        value->info = current->rlink;
+        
+        if(trailCurrent == NULL) //current did not move;
+        {
+            value->setLeftChild = current->llink;
+        }
+        else
+        {
+            trailCurrent->rlink = current->llink;
+        }
+        delete current;
     }
 }
