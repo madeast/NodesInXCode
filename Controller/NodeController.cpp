@@ -31,23 +31,7 @@ void NodeController :: testsLists()
 
 void NodeController :: start()
 {
-
-	testsLists();
-
-	arrayTimer.startTimer();
-
-	for(int index = 0; index < notHipsterInts->getSize(); index++)
-	{
-			notHipsterInts->set(index, (23 * index));
-	}
-
-	for(int index = 0; index < notHipsterInts->getSize(); index++)
-	{
-		cout << "notHipsterInts at index " << index << " contains " << notHipsterInts->get(index) << endl;
-	}
-
-	arrayTimer.stopTimer();
-	arrayTimer.displayTimerInformation();
+    tryTree();
 }
 
 void NodeController::checkSorts()
@@ -162,6 +146,14 @@ void NodeController::quickSort(int first, int size)
         quickSort(first, pivotIndex-1);
         quickSort(pivotIndex+1, size);
     }
+}
+
+void NodeController :: tryTree()
+{
+    CTECBinaryTree<int> testTree;
+    testTree.insert(7);
+    testTree.insert(10);
+    testTree.insert(-5);
 }
 
 int NodeController::partition(int first, int last)

@@ -21,9 +21,9 @@ CTECBinaryTree<Type> :: CTECBinaryTree()
 template<class Type>
 bool CTECBinaryTree<Type> :: insert(const Type& value)
 {
-    TreeNode<Type> * insertedNode(value);
+    TreeNode<Type> * insertedNode = new TreeNode<Type>(value);
     TreeNode<Type> * current;
-    TreeNode<Type> * trailingCurrent;
+    TreeNode<Type> * trailingCurrent = nullptr;
     assert(insertedNode != nullptr);
     
     if(contains(value))
@@ -176,11 +176,11 @@ bool CTECBinaryTree<Type> :: contains(Type value)
      Else the value is not in the root and is greater thatn root - call contains on right child.
      */
     bool isInTree = false;
-    if(root->getValue == value)
+    if(root->getValue() == value)
     {
         return true;
     }
-    else if(value < root->getValue)
+    else if(value < root->getValue())
     {
         isInTree = contains(value, root->getLeftChild());
     }
@@ -283,4 +283,10 @@ void CTECBinaryTree<Type> :: remove(TreeNode<Type> * nodeToRemove)
         
         delete current;
     }
+}
+
+template<class Type>
+TreeNode<Type> * CTECBinaryTree<Type> :: getRoot()
+{
+    return root;
 }

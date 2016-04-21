@@ -31,6 +31,7 @@ public:
     bool contains(Type value);
     void remove(const Type& value);
     int getHeight();
+    int getSize();
     bool isBalanced();
     TreeNode<Type>* getRoot();
     void inorderTraversal(TreeNode<Type> * currentNode);

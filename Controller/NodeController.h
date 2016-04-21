@@ -16,6 +16,7 @@
 #include "../Model/ArrayNode.cpp"
 #include "../Model/CTECArray.h"
 #include "../Model/CTECArray.cpp"
+#include "../Model/CTECBinaryTree.cpp"
 #include "../Model/Timer.h"
 #include "../Model/CtecList.cpp"
 using namespace std;
@@ -35,6 +36,7 @@ private:
     void swap(int first, int second);
     void quickSort(int first, int size);
     int partition(int first, int last);
+    void tryTree();
 public:
 	NodeController();
 	virtual ~NodeController();
