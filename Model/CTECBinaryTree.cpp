@@ -121,6 +121,30 @@ void CTECBinaryTree<Type> :: calculateSize(TreeNode<Type> * currentNode)
 }
 
 template<class Type>
+TreeNode<Type> * CTECBinaryTree<Type> :: getRightMostChild(CTECBinaryTree<Type> * leftSubTree)
+{
+    TreeNode<Type> * rightNode = leftSubTree->getRoot();
+    while(rightNode->getRightChild() !=nullptr)
+    {
+        rightNode = rightNode->getRightChild();
+    }
+    
+    return rightNode;
+}
+
+template<class Type>
+TreeNode<Type> * CTECBinaryTree<Type> :: getLeftMostChild(CTECBinaryTree<Type> * rightSubTree)
+{
+    TreeNode<Type> * leftNode = rightSubTree->getRoot();
+    while(leftNode->getLeftChild() != nullptr)
+    {
+        leftNode = leftNode->getLeftChild();
+    }
+    
+    return leftNode;
+}
+
+template<class Type>
 bool CTECBinaryTree<Type> :: contains(Type value, CTECBinaryTree<Type> * currentTree)
 {
     /*
@@ -168,59 +192,40 @@ bool CTECBinaryTree<Type> :: contains(Type value)
 }
 
 template<class Type>
-Type CTECBinaryTree<Type> :: remove(const Type& value)
+void CTECBinaryTree<Type> :: remove(const Type& value)
 {
-    
+    TreeNode<Type> * current = root;
+    TreeNode<Type> * trailing = current;
     if(!contains(value))
     {
-        return value;
+        return;
     }
     else
     {
-        
+        while(current != nullptr && current->getValue() != value)
+        {
+            trailing = current;
+            if(current->getValue() > value)
+            {
+                current = current->getLeftChild();
+            }
+            else
+            {
+                current = current->getRightChild();
+            }
+        }
     }
-//    CTECBinaryTree<Type> *current; //Pointer to traverse the tree.
-//    CTECBinaryTree<Type> *trailCurrent; //Pointer behind current pointer.
-//    CTECBinaryTree<Type> *temp; //Pointer to delete the node.
-//    
-//    if(value == NULL)
-//    {
-//        cerr << "Error: The node to be deleted is NULL" << endl;
-//    }
-//    else if(value->setLeftChild == NULL && value->setRightChild == NULL)
-//    {
-//        temp = value;
-//        value = NULL;
-//        delete temp;
-//    }
-//    else if(value->setLeftChild == NULL)
-//    {
-//        
-//    }
-//    else if(value->setRightChild == NULL)
-//    {
-//        
-//    }
-//    else{
-//        current = value->setLeftChild;
-//        trailCurrent = NULL;
-//        
-//        while(current->setRightChild != NULL)
-//        {
-//            trailCurrent = current;
-//            current = current->rlink;
-//        }// end while
-//        
-//        value->info = current->rlink;
-//        
-//        if(trailCurrent == NULL) //current did not move;
-//        {
-//            value->setLeftChild = current->llink;
-//        }
-//        else
-//        {
-//            trailCurrent->rlink = current->llink;
-//        }
-//        delete current;
-//    }
+    
+    if(current == root)
+    {
+        remove(root);
+    }
+    else if (trailing->getValue() > value)
+    {
+        remove(trailing->getLeftChild);
+    }
+    else
+    {
+        remove(trailing->getRightChild);
+    }
 }
