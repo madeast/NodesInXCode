@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0FCF861CD1114400911435 /* Graphs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E0FCF841CD1114400911435 /* Graphs.cpp */; };
 		2E1538141CBBE6A300872B24 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E1538121CBBE6A300872B24 /* TreeNode.cpp */; };
 		2E1538171CBBF98800872B24 /* CTECBinaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E1538151CBBF98800872B24 /* CTECBinaryTree.cpp */; };
 		2E4493A71C99A53900B01AFB /* NodeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E4493991C99A53900B01AFB /* NodeController.cpp */; };
@@ -31,6 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E0FCF841CD1114400911435 /* Graphs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graphs.cpp; sourceTree = "<group>"; };
+		2E0FCF851CD1114400911435 /* Graphs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Graphs.hpp; sourceTree = "<group>"; };
 		2E1538121CBBE6A300872B24 /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
 		2E1538131CBBE6A300872B24 /* TreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
 		2E1538151CBBF98800872B24 /* CTECBinaryTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECBinaryTree.cpp; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 				2E1538131CBBE6A300872B24 /* TreeNode.h */,
 				2E1538151CBBF98800872B24 /* CTECBinaryTree.cpp */,
 				2E1538161CBBF98800872B24 /* CTECBinaryTree.h */,
+				2E0FCF841CD1114400911435 /* Graphs.cpp */,
+				2E0FCF851CD1114400911435 /* Graphs.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				2E4493A71C99A53900B01AFB /* NodeController.cpp in Sources */,
 				2E4493AD1C99A53900B01AFB /* Timer.cpp in Sources */,
 				2E1538141CBBE6A300872B24 /* TreeNode.cpp in Sources */,
+				2E0FCF861CD1114400911435 /* Graphs.cpp in Sources */,
 				2E4493AB1C99A53900B01AFB /* CtecList.cpp in Sources */,
 				2E4493A81C99A53900B01AFB /* NodeRunner.cpp in Sources */,
 				2E1538171CBBF98800872B24 /* CTECBinaryTree.cpp in Sources */,
