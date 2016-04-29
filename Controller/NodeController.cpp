@@ -186,6 +186,29 @@ void NodeController::swap(int first, int second)
     mergeData[second] = temp;
 }
 
+void NodeController::doQuick()
+{
+    mergeData = new int[100000000];
+    
+    for(int spot = 0; spot < 100000000; spot++)
+    {
+        int myRandom = rand();
+        mergeData[spot] = myRandom;
+    }
+    Timer mergeTime;
+    mergeTime.startTimer();
+    quickSort(0, 100000000);
+    mergeTime.stopTimer();
+    mergeTime.displayTimerInformation();
+    
+    delete [] mergeData;
+}
+
+void NodeController::tryGraphs()
+{
+    
+}
+
 
 
 

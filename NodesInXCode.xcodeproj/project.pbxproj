@@ -7,16 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E0FCF861CD1114400911435 /* Graphs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E0FCF841CD1114400911435 /* Graphs.cpp */; };
-		2E1538141CBBE6A300872B24 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E1538121CBBE6A300872B24 /* TreeNode.cpp */; };
-		2E1538171CBBF98800872B24 /* CTECBinaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E1538151CBBF98800872B24 /* CTECBinaryTree.cpp */; };
-		2E4493A71C99A53900B01AFB /* NodeController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E4493991C99A53900B01AFB /* NodeController.cpp */; };
 		2E4493A81C99A53900B01AFB /* NodeRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E44939B1C99A53900B01AFB /* NodeRunner.cpp */; };
-		2E4493A91C99A53900B01AFB /* ArrayNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E44939D1C99A53900B01AFB /* ArrayNode.cpp */; };
-		2E4493AA1C99A53900B01AFB /* CTECArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E44939F1C99A53900B01AFB /* CTECArray.cpp */; };
-		2E4493AB1C99A53900B01AFB /* CtecList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E4493A11C99A53900B01AFB /* CtecList.cpp */; };
-		2E4493AC1C99A53900B01AFB /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E4493A31C99A53900B01AFB /* Node.cpp */; };
-		2E4493AD1C99A53900B01AFB /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E4493A51C99A53900B01AFB /* Timer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -171,16 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E4493AC1C99A53900B01AFB /* Node.cpp in Sources */,
-				2E4493A71C99A53900B01AFB /* NodeController.cpp in Sources */,
-				2E4493AD1C99A53900B01AFB /* Timer.cpp in Sources */,
-				2E1538141CBBE6A300872B24 /* TreeNode.cpp in Sources */,
-				2E0FCF861CD1114400911435 /* Graphs.cpp in Sources */,
-				2E4493AB1C99A53900B01AFB /* CtecList.cpp in Sources */,
 				2E4493A81C99A53900B01AFB /* NodeRunner.cpp in Sources */,
-				2E1538171CBBF98800872B24 /* CTECBinaryTree.cpp in Sources */,
-				2E4493A91C99A53900B01AFB /* ArrayNode.cpp in Sources */,
-				2E4493AA1C99A53900B01AFB /* CTECArray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

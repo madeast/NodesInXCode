@@ -24,17 +24,16 @@ namespace std
     public:
         Graph();
         virtual ~Graph();
-        
-        void addVerx(const Type& label);
+        void addVertex(const Type& label);
         void addEdge(int source, int target);
         void removeEdge(int sourc, int target);
         Type& operator [] (int vertex);
+        Type operator [] (int vertex) const;
         int size() const;
         bool isEdge(int source, int target) const;
         std::set<int> neighbors(int vertex) const;
-        Type operator [] (int vertex) const;
         void depthfirstTraversal(Graph<Type> graph, int vertex);
-        void breadthfirstTraversal(Graph<Type>, graph, int vertex);
+        void breadthfirstTraversal(Graph<Type> graph, int vertex);
     };
 
 

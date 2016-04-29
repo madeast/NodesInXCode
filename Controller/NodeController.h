@@ -19,6 +19,7 @@
 #include "../Model/CTECBinaryTree.cpp"
 #include "../Model/Timer.h"
 #include "../Model/CtecList.cpp"
+#include "../Model/Graphs.cpp"
 using namespace std;
 
 class NodeController
@@ -37,6 +38,8 @@ private:
     void quickSort(int first, int size);
     int partition(int first, int last);
     void tryTree();
+    void doQuick();
+    void tryGraphs();
 public:
 	NodeController();
 	virtual ~NodeController();
